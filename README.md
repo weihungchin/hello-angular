@@ -20,8 +20,32 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 2. In `styles.scss`, add the line
 
-```
+```scss
 @import "~bootstrap/dist/css/bootstrap.css";
 ```
+
+---
+
+## Theming with bootstrap
+
+1. Create `variables.scss` file in `/src` directory.
+
+2. Make sure the `styles.scss` file contains the following imports:
+
+```scss
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+```
+
+3. To verify, add the following inside `variables.scss`:
+
+```scss
+$primary: red;
+```
+
+4. Adding a button with `btn-primary` class should display a red-button
+
+5. To get the full list of variables, go to `../node-modules/bootstrap/scss/_variables.scss`
 
 ---
